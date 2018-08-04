@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin:0;
+        }
+        ul{
+            margin:0;
+            padding:0;
+            list-style: none;
+        }
+        img{
+            vertical-align: top;
+        }
+        .imgPlay{
+            width:100vw;
+            height:100vh;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+        }
+
+        .imgList{
+            width:200px;
+            display: grid;
+            grid-template-columns: repeat(3,60px);
+            grid-gap: 10px;
+        }
+        .imgList img{
+            width:60px;
+            margin-bottom:10px;
+        }
+
+        .right{
+            display: grid;
+            grid-template-rows: 50px 1fr;
+            border-left:1px solid #1b6d85;
+        }
+        .box{
+            text-align: center;
+            line-height:300px;
+            font-size:40px;
+            color: #e1e1e1;
+            text-shadow: -1px -1px 1px #ccc;
+        }
+        .box img{
+            width: 100%;
+        }
+        .control{
+            background-color: #f2ab01;
+            padding:10px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="imgPlay">
+    <ul class="imgList">
+        <li>
+            <img src="http://img.hb.aicdn.com/15dc2057fa819f26bbb942fde9c0406e185ab213112e37-l6KKPf_fw658">
+            <img src="http://img.hb.aicdn.com/8e051283d1cd65a5cb173385cef7d27c6ea5effa9d52-d2bwnv_fw658">
+            <img src="http://img.hb.aicdn.com/5ff3fc0b7393fe151d66127110b8c5fa92cac36d21a73f-cxacCN_fw658">
+            <img src="http://img.hb.aicdn.com/e3cde941cd30a5cca4a7c216c7dcf157cf3776be1dcd2-ttPCTH_fw658">
+            <img src="http://img.hb.aicdn.com/66ac29884c61e12e54f725937759201f19892c13952c8-7thsuN_fw658">
+            <img src="http://img.hb.aicdn.com/53d1ae11c232923dac5c3fbd9aa7f2bfcbb0d414386fe-CsO1dk_fw658">
+            <img src="http://img.hb.aicdn.com/c20ed5e704b0e82c20194781d96c8456e9fcbbbd2871e-xFRKHS_fw658">
+            <img src="http://img.hb.aicdn.com/1c26aa37d187ef1a30c2080ddfe449ccf36604b58a2c3-LeKdRx_fw658">
+            <img src="http://img.hb.aicdn.com/12ed093dd265334228aa93d8df30339bf5b1a44312475-aqEh0F_fw658">
+        </li>
+        <li>
+            <img src="http://img.hb.aicdn.com/15d0be1f52e44944752a75f59f9152708f8adb351b5f3-VpcFRj_fw658">
+            <img src="http://img.hb.aicdn.com/b4ee47dd06820674b57d85de309d26aae14900b911f9e-kOpDlN_fw658">
+            <img src="http://img.hb.aicdn.com/eb9b80445f85d3017b982f4c3d29456cbc10eb0d57545-yOROds_fw658">
+            <img src="http://img.hb.aicdn.com/d697e0b91865bd0b689f653a8c159571bf495397198ce-vgyERc_fw658">
+            <img src="http://img.hb.aicdn.com/55928bb0a2fd4cc876b0d010a9f096baf00de54021b84-369c92_fw658">
+            <img src="http://img.hb.aicdn.com/8cb4307218be26467e0cc2ad0c7b02ae88c83c6c22c8a-3fsFtI_fw658">
+            <img src="http://img.hb.aicdn.com/a2ec3dbcc30a7f3b7259d46087bbf8cc4e62c482c0a0e-TWcLoD_fw658">
+            <img src="http://img.hb.aicdn.com/d58d49b6329831b95831dc06dfab0c462ac5c6f2fe03-UphgHp_fw658">
+            <img src="http://img.hb.aicdn.com/4f4aae95556a9584a792650d70645945188a391956148-i0b7VI_fw658">
+            <img src="http://img.hb.aicdn.com/bb3f18bf228bd4407fc393b3126b276da15ee6e14173f-Qz93PZ_fw658">
+        </li>
+        <li>
+            <img src="http://img.hb.aicdn.com/c8b45279862d7b4184866945125a3d4b5168c2031d527c-4PoTRT_fw658">
+            <img src="http://img.hb.aicdn.com/c58b8592631bfb9d28e9717aa4042522a821e0ad418b2-kdW27y_fw658">
+            <img src="http://img.hb.aicdn.com/cd261a0340e080662c5d927291c682e6d01eb955168f54-JudG6U_fw658">
+            <img src="http://img.hb.aicdn.com/cb53417f0b62f7f2fa4e3cdf62cacbbf64552b2a3bacc-8q1ahp_fw658">
+            <img src="http://img.hb.aicdn.com/88284cff6eed234ed522da1e7bc14382e824f7af343af-UxbPuU_fw658">
+            <img src="http://img.hb.aicdn.com/5cf0697592d314271f13a8feab5cbb875555377117e274-GjzpE9_fw658">
+            <img src="http://img.hb.aicdn.com/26c537abafd1bb633afbb97e1b8d87e9c8b01dfc92f4e-JJmE7S_fw658">
+            <img src="http://img.hb.aicdn.com/6a2ab857fdcf7f117c502b339abd07278dc08faf42321-q2yn4Q_fw658">
+        </li>
+    </ul>
+    <div class="right">
+        <div class="control" id="control">
+            <label>
+                <input type="range" max="100" min="0" step="1" value="0">
+                <span>灰度</span>
+            </label>
+            <label>
+                <input type="range" max="100" min="0" step="1" value="0">
+                <span>褐色</span>
+            </label>
+            <label>
+                <input type="range" max="20" min="0" step="1" value="0">
+                <span>高斯模糊</span>
+            </label>
+            <label>
+                <input type="range" max="200" min="0" step="1" value="100">
+                <span>亮度</span>
+            </label>
+            <label>
+                <input type="range" max="100" min="0" step="1" value="0">
+                <span>反相</span>
+            </label>
+            <label>
+                <input type="range" max="200" min="0" step="1" value="100">
+                <span>饱和度</span>
+            </label>
+        </div>
+        <div class="box" id="box">
+            可以拖拽图片到这里或者点击左边的图片
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script>
+    box.addEventListener("dragover", function(e){
+        e.preventDefault();
+        box.style.borderColor = 'red';
+    }, false);
+    /*没什么用  提示一下可以放手啦！*/
+
+    box.addEventListener("drop", function(e){
+        e.stopPropagation();
+        e.preventDefault();
+        readFiles(e.dataTransfer.files);
+    }, false);
+    /*  检测到放手，开始处理拖进来的文件  */
+
+    var imgList = document.querySelector('.imgList');
+    imgList.onclick = function(ev){
+        if(ev.target.tagName == 'IMG'){
+            var img = document.createElement("img");
+            img.id = 'imgfile';
+            img.src = ev.target.src;
+            box.innerText = '';
+            box.appendChild(img);
+            playImg();
+        }
+    }
+
+
+    function readFiles(files){
+        if(files.length){
+            var file = files[0];
+            var reader = new FileReader();
+            var img = document.createElement("img");
+            img.id = 'imgfile';
+            img.file = file;
+            box.appendChild(img);
+
+            reader.onload = function(){
+                img.src = this.result;
+                playImg();
+            };
+            reader.readAsDataURL(file);
+        }
+    }
+    /* 文件读取，随便写的，只处理图片 */
+
+    /* 各种玩图片吧！ */
+    function playImg(){
+        var controlBtn = control.getElementsByTagName('input');
+        var old = null;
+
+        controlBtn[0].oninput = function(){
+            console.log(this.value/100);
+            filter({
+                obj:imgfile,
+                filter:'grayscale',
+                num:this.value/100
+            });
+        };
+        controlBtn[1].oninput = function(){
+            console.log(this.value/100);
+            filter({
+                obj:imgfile,
+                filter:'sepia',
+                num:this.value/100
+            });
+        };
+        controlBtn[2].oninput = function(){
+            filter({
+                obj:imgfile,
+                filter:'blur',
+                num:this.value
+            });
+        };
+        controlBtn[3].oninput = function(){
+            filter({
+                obj:imgfile,
+                filter:'brightness',
+                num:this.value/100
+            });
+        };
+        controlBtn[4].oninput = function(){
+            filter({
+                obj:imgfile,
+                filter:'invert',
+                num:this.value/100
+            });
+        };
+        controlBtn[5].oninput = function(){
+            filter({
+                obj:imgfile,
+                filter:'saturate',
+                num:this.value/100
+            });
+        };
+    }
+
+
+    function filter(option){
+        /*
+            {
+                obj:obj
+                filter:filterName
+                num:filterNum
+            }
+        */
+
+        var objFilter = null;
+        if(window.getComputedStyle(option.obj).filter != 'none'){
+            //先判断元素身上是否已经存在滤镜
+
+            objFilter = window.getComputedStyle(option.obj).filter.split(' ');
+            //如果有，则把所有的滤镜获取到，获取到的是一个字符串：sepia(0.3) blur(5px) grayscale(0.2)，要操作其中的一个，则需要先把这个字符串转换成数组 直接用空格拆分就可以了
+
+            var result = {};
+            objFilter.forEach(function(item){
+                var a = item.split('(');
+                a[1] = parseFloat(a[1].substring(0,a[1].length-1));
+                result[a[0]] = a[1];
+            });
+            //拆分开的数组仍然不是一个可以操作的对象 遍历数组，把数组中的每一项再拆分 sepia(0.3) 拆分成一个对象中的一对键值  这样的话操作对象中的属性就可以改变其中某一个的数值了
+
+            if(option.filter){
+                var str = '';
+                result[option.filter] = option.num;
+                for(a in result){  //这里遍历对象，再把修改后的对象拼成样式字符串：sepia(0.3) blur(10px) grayscale(0.2)
+                    if(a == 'blur'){
+                        str += a+'('+ result[a] +'px) '
+                    }else{
+                        str += a+'('+ result[a] +') '
+                    }
+                }
+                option.obj.style.filter = str; //然后重新设置元素的filter属性
+            }
+            return result;  //把获取到的结果返回出去，以便后期利用
+        }else{  //如果元素身上没有filter属性，则直接设置就好了  在这里只是做了简单的判断
+            if(option.filter == 'blur'){
+                option.obj.style.filter = option.filter+'('+ option.num +'px) ';
+            }else{
+                option.obj.style.filter = option.filter+'('+ option.num +') ';
+            }
+        }
+    }
+</script>
+</body>
+</html>
